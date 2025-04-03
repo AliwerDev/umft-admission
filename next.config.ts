@@ -1,14 +1,9 @@
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin({});
 
 const nextConfig: NextConfig = {
-    /* config options here */
-    webpack(config) {
-        config.module.rules.push({
-            test: /\.svg$/,
-            use: ['@svgr/webpack'],
-        });
-        return config;
-    },
     eslint: {
         ignoreDuringBuilds: true,
     },
@@ -23,4 +18,4 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -1,1 +1,35 @@
-{}
+{
+    "guide": "Yo'riqnoma",
+    "about": "Loyiha haqida",
+    "features": "Qulayliklar",
+    "team": "Bizning jamoa",
+    "login": "Kirish",
+    "contacts": "Bog'lanish",
+    "copyright": "© 2025 Elektron Menu | Barcha huquqlar himoyalangan.",
+
+    "HeroSection": {
+        "title": "ELEKTRON MENYU - bog'chalar uchun onlayn taomnoma nazorati",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+    },
+    "GuideSection": {
+        "title": "Yo'riqnoma"
+    },
+    "AboutSection": {
+        "title": "Loyiha haqida sample text yozish kerak",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+    },
+    "FeaturesSection": {
+        "title": "Qulayliklar"
+    },
+    "TeamSection": {
+        "title": "Bizning jamoa",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+    },
+    "ContactsSection": {
+        "title": "Bog'lanish",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum",
+        "phone": "Telefon raqam",
+        "email": "Elektron pochta",
+        "address": "Manzil"
+    }
+}

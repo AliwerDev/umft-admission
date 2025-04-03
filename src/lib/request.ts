@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { get, isEmpty } from 'lodash';
-import { getSession } from 'next-auth/react';
 import toast from 'react-hot-toast';
 
 const request = axios.create({
@@ -12,14 +11,6 @@ const request = axios.create({
 
 request.interceptors.request.use(
     async function (config) {
-        const session = await getSession(); // NextAuth sessiyasidan tokenni olish
-
-        const token = session?.user?.token;
-
-        if (token) {
-            config.headers['token'] = token;
-        }
-
         return config;
     },
     function (error) {

@@ -1,13 +1,13 @@
-import { getIronSession, SessionOptions } from "iron-session";
-import { NextRequest } from "next/server";
+import { getIronSession, SessionOptions } from 'iron-session';
+import { NextRequest } from 'next/server';
 
 const sessionOptions: SessionOptions = {
-    cookieName: "session_token",
+    cookieName: 'session_token',
     password: process.env.SESSION_SECRET as string, // 32 ta belgili maxfiy kalit
     cookieOptions: {
-        secure: process.env.NODE_ENV === "production", // HTTPS bo'lsa true
+        secure: process.env.NODE_ENV === 'production', // HTTPS bo'lsa true
         httpOnly: true,
-        sameSite: "strict",
+        sameSite: 'strict',
     },
 };
 
