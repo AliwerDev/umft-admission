@@ -16,7 +16,7 @@ const HeroSection = () => {
             }}
             className="bg-cover bg-center bg-no-repeat relative"
         >
-            <div className="container h-[900px] overflow-hidden relative z-10 text-white flex flex-col justify-center items-center">
+            <div className="container min-h-screen overflow-hidden relative z-10 text-white flex flex-col justify-center items-center">
                 <div className="flex justify-between items-center py-3 absolute top-0 left-0 w-full">
                     <Image src="/images/logo/logo-light.svg" alt="logo" width={130} height={60} />
 
