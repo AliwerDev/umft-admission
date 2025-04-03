@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '../common/LanguageSwitcher';
 
 const HeroSection = () => {
     const t = useTranslations();
@@ -38,9 +39,13 @@ const HeroSection = () => {
                             </a>
                         </div>
 
-                        <button className="flex justify-center items-center rounded-lg h-[45px] w-[160px] bg-[#9DD74F] text-lg cursor-pointer">
-                            {t('login')}
-                        </button>
+                        <LanguageSwitcher />
+
+                        <a href="http://cabinet.elektron-menyu.uz/" target="_blank">
+                            <button className="flex justify-center items-center rounded-lg h-[45px] w-[160px] bg-[#9DD74F] text-lg cursor-pointer">
+                                {t('login')}
+                            </button>
+                        </a>
                     </div>
                 </div>
 
