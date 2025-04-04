@@ -24,9 +24,13 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <select onChange={handleChange} defaultValue={locale} className="border rounded-lg px-3 py-1 text-sm shadow-sm focus:outline-none">
+        <select
+            onChange={handleChange}
+            defaultValue={locale}
+            className="cursor-pointer rounded-lg border px-3 py-1 text-sm shadow-sm focus:outline-none"
+        >
             {locales.map((l) => (
-                <option className="bg-black cursor-pointer" key={l} value={l}>
+                <option className="cursor-pointer bg-black" key={l} value={l}>
                     {names[l]}
                 </option>
             ))}

@@ -1,40 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '../common/LanguageSwitcher';
+import MobileDrawer from '../common/MobileDrawer';
 
 const HeroSection = () => {
     const t = useTranslations();
     const heroT = useTranslations('HeroSection');
+    const [isDrawerOpen, setDrawerOpen] = useState(false);
 
     return (
         <div
             style={{
                 backgroundImage: 'url("/images/hero-bg.png")',
             }}
-            className="bg-cover bg-center bg-no-repeat relative"
+            className="relative bg-cover bg-center bg-no-repeat"
         >
-            <div className="container min-h-screen overflow-hidden relative z-10 text-white flex flex-col justify-center items-center">
-                <div className="flex justify-between items-center py-3 absolute top-0 left-0 w-full">
+            <div className="relative z-10 container flex min-h-screen flex-col items-center justify-center overflow-hidden text-white">
+                <div className="absolute top-0 left-0 container flex w-full items-center justify-between py-4">
                     <Image src="/images/logo/logo-light.svg" alt="logo" width={130} height={60} />
 
-                    <div className="flex items-center gap-6">
+                    <div className="hidden items-center gap-6 xl:flex">
                         <div className="flex gap-6">
-                            <a className="text-white decoration-0 font-normal text-lg" href="#guide">
+                            <a className="text-lg font-normal text-white decoration-0" href="#guide">
                                 {t('guide')}
                             </a>
-                            <a className="text-white decoration-0 font-normal text-lg" href="#about">
+                            <a className="text-lg font-normal text-white decoration-0" href="#about">
                                 {t('about')}
                             </a>
-                            <a className="text-white decoration-0 font-normal text-lg" href="#features">
+                            <a className="text-lg font-normal text-white decoration-0" href="#features">
                                 {t('features')}
                             </a>
-                            <a className="text-white decoration-0 font-normal text-lg" href="#team">
+                            <a className="text-lg font-normal text-white decoration-0" href="#team">
                                 {t('team')}
                             </a>
-                            <a className="text-white decoration-0 font-normal text-lg" href="#contacts">
+                            <a className="text-lg font-normal text-white decoration-0" href="#contacts">
                                 {t('contacts')}
                             </a>
                         </div>
@@ -42,22 +44,40 @@ const HeroSection = () => {
                         <LanguageSwitcher />
 
                         <a href="http://cabinet.elektron-menyu.uz/" target="_blank">
-                            <button className="flex justify-center items-center rounded-lg h-[45px] w-[160px] bg-[#9DD74F] text-lg cursor-pointer">
+                            <button className="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-lg bg-[#9DD74F] text-lg">
                                 {t('login')}
                             </button>
                         </a>
                     </div>
+
+                    <Image
+                        className="block cursor-pointer xl:hidden"
+                        src="/images/icons/menu-burger.svg"
+                        width={40}
+                        height={40}
+                        alt="elektron-menyu"
+                        onClick={() => setDrawerOpen(true)}
+                    />
                 </div>
 
-                <div className="flex flex-col gap-8 items-center">
-                    <h2 className="font-bold text-[70px] leading-[80px] tracking-[0px] text-center max-w-[1200px]">{heroT('title')}</h2>
-                    <p className="text-[20px] leading-[28px] tracking-[-0.4px] text-center max-w-[550px]">{heroT('description')}</p>
+                <div className="flex flex-col items-center gap-8">
+                    <h2 className="max-w-[1200px] text-center text-4xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-6xl xl:text-7xl">
+                        {heroT('title')}
+                    </h2>
+                    <p className="max-w-xl text-center text-lg leading-normal md:text-xl lg:text-2xl">{heroT('description')}</p>
+
+                    <a href="http://cabinet.elektron-menyu.uz/" target="_blank" className="xl:hidden">
+                        <button className="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-lg bg-[#9DD74F] text-lg">
+                            {t('login')}
+                        </button>
+                    </a>
                 </div>
             </div>
-            <div className="absolute bottom-0 flex justify-center w-full z-20">
-                <Image src={'/images/hero-meal.png'} alt="hero" width={500} height={230} />
+            <div className="absolute bottom-0 z-20 flex w-full justify-center">
+                <Image src={'/images/hero-meal.png'} alt="hero" className="max-w-96 lg:max-w-[500px]" width={500} height={230} />
             </div>
-            <div className="bg-[#0404048C] absolute top-0 left-0 w-full h-full"></div>
+            <div className="absolute top-0 left-0 h-full w-full bg-[#0404048C]"></div>
+            <MobileDrawer isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} />
         </div>
     );
 };

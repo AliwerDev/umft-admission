@@ -1,6 +1,7 @@
 {
-    "i18n-ally.localesPaths": [
-        "src/i18n",
-        "src/locales"
-    ]
+    "i18n-ally.localesPaths": ["src/locales"],
+    "i18n-ally.pathMatcher": "src/locales/{locale}/translation.json",
+    "i18n-ally.sourceLanguage": "uz",
+    "i18n-ally.defaultLocale": "uz",
+    "i18n-ally.enabledLocales": ["uz", "ru", "uzc"]
 }
