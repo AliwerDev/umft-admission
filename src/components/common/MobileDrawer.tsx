@@ -36,9 +36,9 @@ const MobileDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                     transition={{ type: 'spring', damping: 20, stiffness: 300 }}
                     className="fixed top-0 left-0 z-[999] flex h-screen w-full items-center justify-center bg-black/10 px-6 pt-8 text-white backdrop-blur-xl"
                 >
-                    <div className="fixed top-0 left-0 container flex w-full items-start justify-between py-4">
+                    <div className="fixed top-0 left-0 container flex w-full items-center justify-between py-4">
                         <Image src="/images/logo/logo-light.svg" alt="logo" width={130} height={60} />
-                        <button onClick={onClose} className="mr-6 cursor-pointer text-4xl font-extrabold text-white">
+                        <button onClick={onClose} className="mr-2 cursor-pointer text-4xl font-extrabold text-white">
                             ×
                         </button>
                     </div>
