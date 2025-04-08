@@ -27,7 +27,7 @@ const HeroSection = () => {
                             <a className="text-lg font-normal text-white decoration-0" href="#guide">
                                 {t('guide')}
                             </a>
-                            <a className="text-lg font-normal text-white decoration-0" href="#about">
+                            {/* <a className="text-lg font-normal text-white decoration-0" href="#about">
                                 {t('about')}
                             </a>
                             <a className="text-lg font-normal text-white decoration-0" href="#features">
@@ -35,7 +35,7 @@ const HeroSection = () => {
                             </a>
                             <a className="text-lg font-normal text-white decoration-0" href="#team">
                                 {t('team')}
-                            </a>
+                            </a> */}
                             <a className="text-lg font-normal text-white decoration-0" href="#contacts">
                                 {t('contacts')}
                             </a>
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-8">
-                    <h2 className="max-w-[1200px] text-center text-4xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-6xl xl:text-7xl">
+                    <h2 className="max-w-[1200px] text-center text-3xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-4xl xl:text-5xl">
                         {heroT('title')}
                     </h2>
                     <p className="max-w-xl text-center text-lg leading-normal md:text-xl lg:text-2xl">{heroT('description')}</p>
@@ -73,9 +73,9 @@ const HeroSection = () => {
                     </a>
                 </div>
             </div>
-            <div className="absolute bottom-0 z-20 flex w-full justify-center">
-                <Image src={'/images/hero-meal.png'} alt="hero" className="max-w-96 lg:max-w-[500px]" width={500} height={230} />
-            </div>
+            {/* <div className="absolute bottom-0 z-20 flex w-full justify-center">
+                <Image src={'/images/boxes.png'} alt="hero" className="max-w-96 lg:max-w-[500px]" width={500} height={230} />
+            </div> */}
             <div className="absolute top-0 left-0 h-full w-full bg-[#0404048C]"></div>
             <MobileDrawer isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} />
         </div>

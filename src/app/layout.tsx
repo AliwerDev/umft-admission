@@ -10,8 +10,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-    title: 'Elektron menyu',
-    description: "Elektron menyu - davlat bog'chalari uchun onlayn taomnoma nazorati",
+    title: 'REGISTON AVIAPOCHTA',
+    description: 'Xalqaro pochta xizmati — Turkiyadan O‘zbekistonga yetkazish endi yanada oson',
 };
 
 const nunito = Nunito({

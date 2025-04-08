@@ -12,7 +12,7 @@ const Footer = () => {
                     <Image src="/images/logo/logo-light.svg" alt="logo" width={130} height={60} />
 
                     <div className="flex flex-col items-center gap-6 sm:flex-row">
-                        <a className="text-center font-normal text-white decoration-0" href="#guide">
+                        {/* <a className="text-center font-normal text-white decoration-0" href="#guide">
                             {t('guide')}
                         </a>
                         <a className="font-normal text-white decoration-0" href="#about">
@@ -23,6 +23,9 @@ const Footer = () => {
                         </a>
                         <a className="font-normal text-white decoration-0" href="#team">
                             {t('team')}
+                        </a> */}
+                        <a className="font-normal text-white decoration-0" href="#contacts">
+                            {t('contacts')}
                         </a>
                     </div>
 
