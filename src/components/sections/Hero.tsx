@@ -64,11 +64,27 @@ const HeroSection = () => {
                     <h2 className="max-w-[1200px] text-center text-3xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-4xl xl:text-5xl">
                         {heroT('title')}
                     </h2>
-                    <p className="max-w-xl text-center text-lg leading-normal md:text-xl lg:text-2xl">{heroT('description')}</p>
 
-                    <a href="http://cabinet.elektron-menyu.uz/" target="_blank" className="xl:hidden">
-                        <button className="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-lg bg-[#9DD74F] text-lg">
-                            {t('login')}
+                    <a href="#shipment">
+                        <button className="flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#9DD74F] px-12 py-4 text-2xl">
+                            {t('tracking_shipment')}{' '}
+                            <svg
+                                className="h-[42px] w-[42px] text-gray-800 dark:text-white"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 12H5m14 0-4 4m4-4-4-4"
+                                />
+                            </svg>
                         </button>
                     </a>
                 </div>
