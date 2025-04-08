@@ -22,11 +22,11 @@ const HeroSection = () => {
                 <div className="absolute top-0 left-0 container flex w-full items-center justify-between py-4">
                     <Image src="/images/logo/logo-light.svg" alt="logo" width={130} height={60} />
 
-                    <div className="hidden items-center gap-6 xl:flex">
+                    <div className="flex items-center gap-6 xl:flex">
                         <div className="flex gap-6">
-                            <a className="text-lg font-normal text-white decoration-0" href="#guide">
+                            {/* <a className="text-lg font-normal text-white decoration-0" href="#guide">
                                 {t('guide')}
-                            </a>
+                            </a> */}
                             {/* <a className="text-lg font-normal text-white decoration-0" href="#about">
                                 {t('about')}
                             </a>
@@ -36,9 +36,9 @@ const HeroSection = () => {
                             <a className="text-lg font-normal text-white decoration-0" href="#team">
                                 {t('team')}
                             </a> */}
-                            <a className="text-lg font-normal text-white decoration-0" href="#contacts">
+                            {/* <a className="text-lg font-normal text-white decoration-0" href="#contacts">
                                 {t('contacts')}
-                            </a>
+                            </a> */}
                         </div>
 
                         <LanguageSwitcher />
@@ -50,14 +50,14 @@ const HeroSection = () => {
                         </a>
                     </div>
 
-                    <Image
+                    {/* <Image
                         className="block cursor-pointer xl:hidden"
                         src="/images/icons/menu-burger.svg"
                         width={40}
                         height={40}
                         alt="elektron-menyu"
                         onClick={() => setDrawerOpen(true)}
-                    />
+                    /> */}
                 </div>
 
                 <div className="flex flex-col items-center gap-8">

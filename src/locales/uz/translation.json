@@ -1,29 +1,10 @@
 {
-    "guide": "Yo'riqnoma",
-    "about": "Loyiha haqida",
-    "features": "Qulayliklar",
-    "team": "Bizning jamoa",
     "login": "Kirish",
     "contacts": "Bog'lanish",
     "copyright": "© 2025 REGISTON AVIAPOCHTA | Barcha huquqlar himoyalangan.",
 
     "HeroSection": {
-        "title": "REGISTON AVIAPOCHTA - Turkiyadan O‘zbekistonga tez, xavfsiz va ishonchli pochta yetkazib berish xizmati",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
-    },
-    "GuideSection": {
-        "title": "Yo'riqnoma"
-    },
-    "AboutSection": {
-        "title": "Loyiha haqida sample text yozish kerak",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
-    },
-    "FeaturesSection": {
-        "title": "Qulayliklar"
-    },
-    "TeamSection": {
-        "title": "Bizning jamoa",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum"
+        "title": "REGISTON AVIAPOCHTA - Turkiyadan O‘zbekistonga tez, xavfsiz va ishonchli pochta yetkazib berish xizmati"
     },
     "ContactsSection": {
         "title": "Bog'lanish",
@@ -31,5 +12,35 @@
         "phone": "Telefon raqam",
         "email": "Elektron pochta",
         "address": "Manzil"
+    },
+    "Shipment": {
+        "title": "Jo’natma statusini tekshirish",
+        "subtitle": "Jo'natma uchun berilgan INVOICE raqamni kiriting",
+        "CREATED": "Jo‘natma hali yuborilmagan",
+        "DEPARTED": "Xalqaro tashuv jarayonida",
+        "ENTERED_UZB": "Bojhona tekshiruvida",
+        "LOCAL_PROCESS": "Ichki yetkazib berish jarayonida",
+        "DELIVERED": "Jo‘natma mijozga yetkazilgan",
+        "input": {
+            "placeholder": "Jo‘natma raqamini kiriting"
+        },
+        "button": {
+            "search": "IZLASH"
+        },
+        "status": {
+            "title": "Jo‘natma statusi",
+            "errorTitle": "Xatolik"
+        },
+        "error": {
+            "required": "Jo'natma raqami kiritilishi shart",
+            "notFound": "Jo‘natma topilmadi.",
+            "server": "Jo‘natma topilmadi iltimos raqamni tekshirib qayta kiriting!."
+        },
+        "time": {
+            "departure": "Xalqaro tashuv boshlanishi:",
+            "enteredUzb": "O‘zbekistonga kirgan vaqt:",
+            "localProcess": "Mahalliy tashuv jarayoni vaqti:",
+            "delivered": "Qabul qiluvchiga yetkazilgan vaqt:"
+        }
     }
 }
