@@ -1,15 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '../common/LanguageSwitcher';
-import MobileDrawer from '../common/MobileDrawer';
 
 const HeroSection = () => {
     const t = useTranslations();
     const heroT = useTranslations('HeroSection');
-    const [isDrawerOpen, setDrawerOpen] = useState(false);
 
     return (
         <div
@@ -43,7 +41,7 @@ const HeroSection = () => {
 
                         <LanguageSwitcher />
 
-                        <a href="http://cabinet.elektron-menyu.uz/" target="_blank">
+                        <a href="https://app.registon-aviapochta.uz/" target="_blank">
                             <button className="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-lg bg-[#9DD74F] text-lg">
                                 {t('login')}
                             </button>
@@ -93,7 +91,7 @@ const HeroSection = () => {
                 <Image src={'/images/boxes.png'} alt="hero" className="max-w-96 lg:max-w-[500px]" width={500} height={230} />
             </div> */}
             <div className="absolute top-0 left-0 h-full w-full bg-[#0404048C]"></div>
-            <MobileDrawer isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} />
+            {/* <MobileDrawer isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)} /> */}
         </div>
     );
 };

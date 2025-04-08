@@ -1,5 +1,5 @@
 const config = {
-    locales: ['uzc', 'uz', 'ru'],
+    locales: ['tr', 'uz', 'ru'],
     defaultLocale: 'uz',
 };
 

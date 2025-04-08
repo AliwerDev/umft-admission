@@ -6,7 +6,7 @@ import { useTransition } from 'react';
 const names: any = {
     uz: "O'zbek",
     ru: 'Русский',
-    uzc: 'Криль',
+    tr: 'Türkçe',
 };
 
 export default function LanguageSwitcher() {
