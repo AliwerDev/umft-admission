@@ -3,6 +3,7 @@
     "version": "2.0.1",
     "private": true,
     "scripts": {
+        "type-check": "tsc --noEmit",
         "dev": "next dev",
         "build": "next build",
         "start": "next start -p 3001",
