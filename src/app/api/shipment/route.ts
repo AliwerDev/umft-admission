@@ -5,11 +5,8 @@ import axios from 'axios';
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const invoiceNumber = searchParams.get('tracking');
-    const url = `http://localhost:8987/api/shipment/status/${invoiceNumber}`;
-
-    console.log(invoiceNumber);
-
-    // const url = `https://api.registon-aviapochta.uz/api/shipment/status/${invoiceNumber}`;
+    // const url = `http://localhost:8987/api/shipment/status/${invoiceNumber}`;
+    const url = `https://api.registon-aviapochta.uz/api/shipment/status/${invoiceNumber}`;
 
     if (!invoiceNumber) {
         return NextResponse.json({ error: 'Tracking raqami kiritilmagan' }, { status: 400 });

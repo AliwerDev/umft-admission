@@ -41,7 +41,7 @@ const HeroSection = () => {
 
                         <LanguageSwitcher />
 
-                        <a href="https://app.registon-aviapochta.uz/" target="_blank">
+                        <a href="https://app.registon-aviapochta.uz/" target="_blank" className="hidden sm:block">
                             <button className="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-lg bg-[#9DD74F] text-lg">
                                 {t('login')}
                             </button>
@@ -59,15 +59,15 @@ const HeroSection = () => {
                 </div>
 
                 <div className="flex flex-col items-center gap-8">
-                    <h2 className="max-w-[1200px] text-center text-3xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-4xl xl:text-5xl">
+                    <h2 className="max-w-[1200px] text-center text-2xl leading-snug font-bold tracking-[0px] sm:text-5xl md:text-4xl xl:text-5xl">
                         {heroT('title')}
                     </h2>
 
                     <a href="#shipment">
-                        <button className="flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#9DD74F] px-12 py-4 text-2xl">
+                        <button className="flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#9DD74F] px-6 py-3 text-lg md:px-12 md:py-4 md:text-2xl">
                             {t('tracking_shipment')}{' '}
                             <svg
-                                className="h-[42px] w-[42px] text-gray-800 dark:text-white"
+                                className="h-6 w-6 text-gray-800 md:h-[42px] md:w-[42px] dark:text-white"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
