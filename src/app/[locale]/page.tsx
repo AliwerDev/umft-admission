@@ -19,7 +19,7 @@ const Page = () => {
             const response = await axios.post('/api/contact', formData);
 
             if (response.status === 200) {
-                router.push('/thank-you');
+                router.push('/register');
             } else {
                 toast.error(t('InternalError'));
             }
