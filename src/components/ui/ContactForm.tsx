@@ -3,7 +3,7 @@ import CustomPhoneInput from '../shared/InputMusk';
 import { useTranslations } from 'next-intl';
 
 interface ContactFormProps {
-    onSubmit: (data: { name: string; phone: string }) => void;
+    onSubmit: (data: { first_name: string; phone_number: string }) => void;
 }
 
 export default function ContactForm({ onSubmit }: ContactFormProps) {
@@ -14,23 +14,23 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
         control,
         handleSubmit,
         formState: { errors },
-    } = useForm<{ name: string; phone: string }>();
+    } = useForm<{ first_name: string; phone_number: string }>();
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="mb-4 space-y-4">
             <div>
-                <input type="text" placeholder={t('namePlaceholder')} {...register('name', { required: t('nameRequired') })} />
-                {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
+                <input type="text" placeholder={t('namePlaceholder')} {...register('first_name', { required: t('nameRequired') })} />
+                {errors.first_name && <p className="mt-1 text-sm text-red-500">{errors.first_name.message}</p>}
             </div>
 
             <div>
                 <Controller
-                    name="phone"
+                    name="phone_number"
                     control={control}
                     rules={{ required: t('phoneRequired') }}
                     render={({ field }) => <CustomPhoneInput value={field.value || ''} onChange={field.onChange} />}
                 />
-                {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
+                {errors.phone_number && <p className="mt-1 text-sm text-red-500">{errors.phone_number.message}</p>}
             </div>
 
             <button

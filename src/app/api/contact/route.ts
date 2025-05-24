@@ -4,16 +4,19 @@ export async function POST(request: NextRequest) {
     try {
         const formData = await request.json();
 
-        const backendResponse = await fetch('https://your-d.com/api/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+        const backendResponse = await fetch(
+            'https://script.google.com/macros/s/AKfycby0pQHnFglzcDOHuNRS5xrfASOu-pNPITd9jB-xTKWMnj98x7tDy3K2bRknyiIqGcA/exec',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             },
-            body: JSON.stringify(formData),
-        });
-        console.log(backendResponse);
+        );
 
         if (!backendResponse.ok) {
+            console.log(backendResponse);
             return NextResponse.json({ error: 'Backendga yuborishda xatolik' }, { status: 500 });
         }
 
