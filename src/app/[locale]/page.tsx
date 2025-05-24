@@ -2,7 +2,7 @@
 import LanguageSwitcher from '@/components/common/LanguageSwitcher';
 import ContactForm from '@/components/ui/ContactForm';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import ImageCarousel from '@/components/ui/ImageCarousel';
 import axios from 'axios';
@@ -11,10 +11,13 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 
 const Page = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
     const t = useTranslations();
     const router = useRouter();
 
     const handleSubmit = async (formData: any) => {
+        setIsLoading(true);
         try {
             const response = await axios.post('/api/contact', formData);
 
@@ -26,6 +29,8 @@ const Page = () => {
         } catch (error) {
             toast.error(t('InternalError'), { position: 'top-center' });
             console.error('Server bilan bogʻlanishda xatolik:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -52,7 +57,7 @@ const Page = () => {
                 </h1>
 
                 <p className="mb-4 text-base text-gray-600 md:text-lg lg:text-xl">{t('description')}</p>
-                <ContactForm onSubmit={handleSubmit} />
+                <ContactForm isLoading={isLoading} onSubmit={handleSubmit} />
 
                 <div className="hidden pt-2 md:block">
                     <LanguageSwitcher />

@@ -1,12 +1,14 @@
 import { useForm, Controller } from 'react-hook-form';
 import CustomPhoneInput from '../shared/InputMusk';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 interface ContactFormProps {
     onSubmit: (data: { first_name: string; phone_number: string }) => void;
+    isLoading: boolean;
 }
 
-export default function ContactForm({ onSubmit }: ContactFormProps) {
+export default function ContactForm({ onSubmit, isLoading }: ContactFormProps) {
     const t = useTranslations();
 
     const {
@@ -35,8 +37,10 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
             <button
                 type="submit"
-                className="transitio mt-4 w-full cursor-pointer rounded-lg bg-[#ffcf00] py-2 font-semibold text-black hover:bg-[#ffcf00] md:mt-6 md:py-3"
+                className="transitio mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#ffcf00] py-2 font-semibold text-black hover:bg-[#ffcf00] md:mt-6 md:py-3"
+                disabled={isLoading}
             >
+                {isLoading && <Image src={'/images/loader.png'} width={20} height={20} className="h-5 w-5 animate-spin" alt="loader" />}
                 {t('submit')}
             </button>
 

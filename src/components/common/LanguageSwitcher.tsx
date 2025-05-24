@@ -1,5 +1,6 @@
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
 import { ComponentProps, useTransition } from 'react';
 
 export default function LanguageSwitcher(props: ComponentProps<'div'>) {
@@ -23,7 +24,8 @@ export default function LanguageSwitcher(props: ComponentProps<'div'>) {
                     (locale === 'uz' ? 'bg-black text-white' : 'bg-gray-200 text-gray-800')
                 }
             >
-                <img src="https://flagcdn.com/w40/uz.png" className="h-4 w-5" alt="Uzbek" /> <span className="hidden md:inline-block">O'zbekcha</span>
+                <Image width={20} height={16} src={'/flags/uz.png'} className="h-4 w-5" alt="Uzbek" />{' '}
+                <span className="hidden md:inline-block">O'zbekcha</span>
             </button>
             <button
                 onClick={() => handleChange('ru')}
@@ -32,7 +34,8 @@ export default function LanguageSwitcher(props: ComponentProps<'div'>) {
                     (locale === 'ru' ? 'bg-black text-white' : 'bg-gray-200 text-gray-800')
                 }
             >
-                <img src="https://flagcdn.com/w40/ru.png" className="h-4 w-5" alt="Russian" /> <span className="hidden md:inline-block">Русский</span>
+                <Image width={20} height={16} src={'/flags/ru.png'} className="h-4 w-5" alt="Русский" />{' '}
+                <span className="hidden md:inline-block">Русский</span>
             </button>
         </div>
     );
