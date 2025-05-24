@@ -19,22 +19,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="mb-4 space-y-4">
             <div>
-                <input
-                    type="text"
-                    placeholder={t('namePlaceholder')}
-                    {...register('name', { required: t('nameRequired') })}
-                    style={{
-                        width: '100%',
-                        padding: '14px 16px',
-                        fontSize: '16px',
-                        borderRadius: '12px',
-                        backgroundColor: '#f3f4f6',
-                        border: 'none',
-                        color: '#1f2937',
-                        fontWeight: 500,
-                        outline: 'none',
-                    }}
-                />
+                <input type="text" placeholder={t('namePlaceholder')} {...register('name', { required: t('nameRequired') })} />
                 {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
             </div>
 
@@ -48,7 +33,10 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
                 {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>}
             </div>
 
-            <button type="submit" className="transitio mt-6 w-full rounded-lg bg-[#ffcf00] py-3 font-semibold text-black hover:bg-[#ffcf00]">
+            <button
+                type="submit"
+                className="transitio mt-4 w-full cursor-pointer rounded-lg bg-[#ffcf00] py-2 font-semibold text-black hover:bg-[#ffcf00] md:mt-6 md:py-3"
+            >
                 {t('submit')}
             </button>
 

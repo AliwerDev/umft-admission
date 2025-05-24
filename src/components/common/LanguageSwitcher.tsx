@@ -1,8 +1,8 @@
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
-import { useTransition } from 'react';
+import { ComponentProps, useTransition } from 'react';
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher(props: ComponentProps<'div'>) {
     const router = useRouter();
     const pathname = usePathname();
     const [, startTransition] = useTransition();
@@ -14,27 +14,25 @@ export default function LanguageSwitcher() {
         });
     };
 
-    console.log(locale);
-
     return (
-        <div className="flex gap-4 pt-2">
+        <div className={'flex gap-2 md:gap-4 ' + props.className} {...props}>
             <button
                 onClick={() => handleChange('uz')}
                 className={
-                    'flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg ' +
-                    (locale === 'uz' ? 'bg-black px-4 py-2 text-white' : 'bg-gray-200 px-4 py-2 text-gray-800')
+                    'flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg px-2 py-2 md:px-4 ' +
+                    (locale === 'uz' ? 'bg-black text-white' : 'bg-gray-200 text-gray-800')
                 }
             >
-                <img src="https://flagcdn.com/w40/uz.png" className="h-4 w-5" alt="Uzbek" /> O'zbekcha
+                <img src="https://flagcdn.com/w40/uz.png" className="h-4 w-5" alt="Uzbek" /> <span className="hidden md:inline-block">O'zbekcha</span>
             </button>
             <button
                 onClick={() => handleChange('ru')}
                 className={
-                    'flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg ' +
-                    (locale === 'ru' ? 'bg-black px-4 py-2 text-white' : 'bg-gray-200 px-4 py-2 text-gray-800')
+                    'flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-lg px-2 py-2 md:px-4 ' +
+                    (locale === 'ru' ? 'bg-black text-white' : 'bg-gray-200 text-gray-800')
                 }
             >
-                <img src="https://flagcdn.com/w40/ru.png" className="h-4 w-5" alt="Russian" /> Русский
+                <img src="https://flagcdn.com/w40/ru.png" className="h-4 w-5" alt="Russian" /> <span className="hidden md:inline-block">Русский</span>
             </button>
         </div>
     );

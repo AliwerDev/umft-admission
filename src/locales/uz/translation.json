@@ -6,5 +6,9 @@
     "nameRequired": "Ismingizni kiriting",
     "phoneRequired": "Telefon raqamingizni kiriting",
     "submit": "Yuborish",
-    "note": "*UMFT University - kelajagingizni birga quramiz."
+    "note": "*UMFT University - kelajagingizni birga quramiz.",
+    "successTitle": "Ajoyib! Bu — kelajagingiz sari tashlangan eng to‘g‘ri qadam!",
+    "successDescription": "Tez orada menejerlarimiz siz bilan bogʻlanib, batafsil maʼlumot beradi.",
+    "goToWebsite": "Veb-sahifaga oʻtish",
+    "socialText": "Bizning ijtimoiy tarmoqlar"
 }

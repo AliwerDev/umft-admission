@@ -27,17 +27,6 @@ export default function CustomPhoneInput({ value, onChange }: Props) {
                 required: true,
                 autoFocus: false,
             }}
-            inputStyle={{
-                width: '100%',
-                padding: '14px 16px',
-                fontSize: '16px',
-                borderRadius: '12px',
-                backgroundColor: '#f3f4f6',
-                border: 'none',
-                color: '#1f2937',
-                fontWeight: 500,
-                outline: 'none',
-            }}
             buttonStyle={{ display: 'none' }}
             containerStyle={{
                 width: '100%',
