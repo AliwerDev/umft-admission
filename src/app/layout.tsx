@@ -1,5 +1,5 @@
 import MainProvider from '@/providers/MainProvider';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Inter, Nunito } from 'next/font/google';
 import './globals.css';
 
@@ -12,12 +12,13 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: 'UMFT',
     description: 'University of Management and Future Technologies',
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-        maximumScale: 1,
-        userScalable: false,
-    },
+};
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
 };
 
 const nunito = Nunito({
