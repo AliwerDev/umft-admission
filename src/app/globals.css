@@ -16,7 +16,7 @@ body {
 
 input:active,
 input:focus {
-    outline: 1px solid #ffcf00 !important;
+    outline: 1px solid #de5c25 !important;
     background: white !important;
 }
 

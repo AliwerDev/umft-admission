@@ -37,7 +37,7 @@ export default function ContactForm({ onSubmit, isLoading }: ContactFormProps) {
 
             <button
                 type="submit"
-                className="transitio mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#ffcf00] py-2 font-semibold text-black hover:bg-[#ffcf00] md:mt-6 md:py-3"
+                className="transitio mt-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#de5c25] py-2 font-semibold text-white hover:bg-[#de5c25] md:mt-6 md:py-3"
                 disabled={isLoading}
             >
                 {isLoading && <Image src={'/images/loader.png'} width={20} height={20} className="h-5 w-5 animate-spin" alt="loader" />}

@@ -22,7 +22,7 @@ export default function SuccessPage() {
             </div>
 
             {/* Main content */}
-            <div className="flex w-full flex-1 flex-col items-center justify-center bg-white px-4 text-center">
+            <div className="mb-4 flex w-full flex-1 flex-col items-center justify-center bg-white px-4 text-center">
                 <div className="mb-6">
                     <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-500">
                         <span className="text-4xl text-white">✓</span>
