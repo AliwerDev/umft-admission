@@ -1,47 +1,10 @@
 {
-    "login": "Kirish",
-    "contacts": "Bog'lanish",
-    "copyright": "© 2025 REGISTON AVIAPOCHTA | Barcha huquqlar himoyalangan.",
-    "tracking_shipment": "Jo'natmani kuzatish",
-
-    "HeroSection": {
-        "title": "REGISTON AVIAPOCHTA - Turkiyadan O‘zbekistonga tez, xavfsiz va ishonchli pochta yetkazib berish xizmati"
-    },
-    "ContactsSection": {
-        "title": "Bog'lanish",
-        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum",
-        "phone": "Telefon raqam",
-        "email": "Elektron pochta",
-        "address": "Manzil"
-    },
-    "Shipment": {
-        "title": "Jo’natma statusini tekshirish",
-        "subtitle": "Jo'natma uchun berilgan INVOICE raqamni kiriting",
-        "CREATED": "Jo‘natma hali yuborilmagan",
-        "DEPARTED": "Xalqaro tashuv jarayonida",
-        "ENTERED_UZB": "Bojhona tekshiruvida",
-        "LOCAL_PROCESS": "Ichki yetkazib berish jarayonida",
-        "DELIVERED": "Jo‘natma mijozga yetkazilgan",
-        "input": {
-            "placeholder": "Jo‘natma raqamini kiriting"
-        },
-        "button": {
-            "search": "IZLASH"
-        },
-        "status": {
-            "title": "Jo‘natma statusi",
-            "errorTitle": "Xatolik"
-        },
-        "error": {
-            "required": "Jo'natma raqami kiritilishi shart",
-            "notFound": "Jo‘natma topilmadi.",
-            "server": "Jo‘natma topilmadi iltimos raqamni tekshirib qayta kiriting!."
-        },
-        "time": {
-            "departure": "Xalqaro tashuv boshlanishi:",
-            "enteredUzb": "O‘zbekistonga kirgan vaqt:",
-            "localProcess": "Mahalliy tashuv jarayoni vaqti:",
-            "delivered": "Qabul qiluvchiga yetkazilgan vaqt:"
-        }
-    }
+    "headingHighlight": "YUQORI MAQSADLAR ",
+    "headingText": "uchun eng to‘g‘ri universitetni izlayapsizmi?",
+    "description": "U holda raqamingizni qoldiring va orzularingizga olib boradigan qadamni qo'ying.",
+    "namePlaceholder": "Ismingiz",
+    "nameRequired": "Ismingizni kiriting",
+    "phoneRequired": "Telefon raqamingizni kiriting",
+    "submit": "Yuborish",
+    "note": "*UMFT University - kelajagingizni birga quramiz."
 }
