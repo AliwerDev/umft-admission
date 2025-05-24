@@ -30,7 +30,10 @@ export default function SuccessPage() {
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">{t('successTitle')}</h1>
                 <p className="mt-3 max-w-md text-gray-500">{t('successDescription')}</p> {/* Website button */}
-                <a href="/" className="mt-4 inline-block rounded-xl bg-gray-100 px-6 py-3 font-semibold text-gray-900 shadow hover:bg-gray-200">
+                <a
+                    href="https://umft.uz/"
+                    className="mt-4 inline-block rounded-xl bg-gray-100 px-6 py-3 font-semibold text-gray-900 shadow hover:bg-gray-200"
+                >
                     {t('goToWebsite')}
                 </a>
             </div>
@@ -57,16 +60,16 @@ export default function SuccessPage() {
             <div className="mt-4 mb-10 text-center text-gray-600">
                 <p className="mb-2 font-medium">{t('socialText')}</p>
                 <div className="flex items-center justify-center gap-4 text-2xl text-gray-500">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/umft.uz/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram />
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/channel/UCodfoirEfSoXlCquATFavaQ" target="_blank" rel="noopener noreferrer">
                         <FaYoutube />
                     </a>
-                    <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/umftuz" target="_blank" rel="noopener noreferrer">
                         <FaTelegram />
                     </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/umft.uz" target="_blank" rel="noopener noreferrer">
                         <FaFacebook />
                     </a>
                 </div>

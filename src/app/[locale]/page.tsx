@@ -30,7 +30,7 @@ const Page = () => {
     };
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-white px-4 py-8 font-sans md:flex-row">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-white px-4 py-8 md:flex-row">
             <div className="flex w-full max-w-md items-start justify-between md:hidden">
                 <Link href={'/'}>
                     <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />

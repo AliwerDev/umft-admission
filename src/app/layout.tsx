@@ -10,8 +10,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-    title: 'REGISTON AVIAPOCHTA',
-    description: 'Xalqaro pochta xizmati — Turkiyadan O‘zbekistonga yetkazish endi yanada oson',
+    title: 'UMFT',
+    description: 'University of Management and Future Technologies',
 };
 
 const nunito = Nunito({
