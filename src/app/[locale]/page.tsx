@@ -5,14 +5,36 @@ import Image from 'next/image';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import ImageCarousel from '@/components/ui/ImageCarousel';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import toast from 'react-hot-toast';
 
 const Page = () => {
     const t = useTranslations();
+    const router = useRouter();
+
+    const handleSubmit = async (formData: any) => {
+        try {
+            const response = await axios.post('/api/contact', formData);
+
+            if (response.status === 200) {
+                router.push('/thank-you');
+            } else {
+                toast.error(t('InternalError'));
+            }
+        } catch (error) {
+            toast.error(t('InternalError'), { position: 'top-center' });
+            console.error('Server bilan bogʻlanishda xatolik:', error);
+        }
+    };
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-center gap-10 bg-white px-4 py-8 font-sans md:flex-row">
             <div className="flex w-full max-w-md items-start justify-between md:hidden">
-                <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />
+                <Link href={'/'}>
+                    <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />
+                </Link>
                 <LanguageSwitcher />
             </div>
             {/* Image Section */}
@@ -30,7 +52,7 @@ const Page = () => {
                 </h1>
 
                 <p className="mb-4 text-base text-gray-600 md:text-lg lg:text-xl">{t('description')}</p>
-                <ContactForm onSubmit={(...rest) => console.log(rest)} />
+                <ContactForm onSubmit={handleSubmit} />
 
                 <div className="hidden pt-2 md:block">
                     <LanguageSwitcher />

@@ -13,5 +13,6 @@
     "socialText": "Bizning ijtimoiy tarmoqlar",
     "newsTitle": "Super yangilik!",
     "newsBody": "UMFT universiteti \"Raqamli Kelajak\" olimpiadasiga start berdi. 4.5 mlrdli grant, 10 ta noutbuk va smartfonlar. Sizga bu olimpiadaga qatnashish imkoni berildi. Hoziroq telegram bot orqali ro'yxatdan o'ting!",
-    "newsButton": "Telegram orqali ro'yxatdan o'tish"
+    "newsButton": "Telegram orqali ro'yxatdan o'tish",
+    "InternalError": "Xatolik yub berdi, Iltimos qayta urinib ko'ring!"
 }

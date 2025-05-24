@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 import { FaInstagram, FaYoutube, FaTelegram, FaFacebook } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function SuccessPage() {
     const t = useTranslations();
@@ -12,8 +13,11 @@ export default function SuccessPage() {
     return (
         <div className="flex min-h-screen flex-col">
             {/* Header */}
+
             <div className="mx-auto flex w-full max-w-5xl items-start justify-between p-3 md:pt-4">
-                <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />
+                <Link href={'/'}>
+                    <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />
+                </Link>
                 <LanguageSwitcher />
             </div>
 
