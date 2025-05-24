@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'nextjs-app',
+            name: 'umft-admission',
             script: 'node_modules/next/dist/bin/next',
             args: 'start -p 3004',
             env: {
