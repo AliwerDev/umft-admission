@@ -7,7 +7,6 @@ export const metadata: Metadata = {
     // other metadata
 };
 
-export default function Ecommerce() {
+export default async function Home() {
     redirect('/dashboard');
-    return null;
 }

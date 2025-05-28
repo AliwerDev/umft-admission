@@ -1,14 +1,12 @@
-'use client';
-
 import LanguageSwitcher from '@/components/common/LanguageSwitcher';
 import Image from 'next/image';
 import React from 'react';
 import { FaInstagram, FaYoutube, FaTelegram, FaFacebook } from 'react-icons/fa';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-export default function SuccessPage() {
-    const t = useTranslations();
+export default async function SuccessPage() {
+    const t = await getTranslations();
 
     return (
         <div className="flex min-h-screen flex-col">
@@ -16,7 +14,7 @@ export default function SuccessPage() {
 
             <div className="mx-auto flex w-full max-w-5xl items-start justify-between p-3 md:pt-4">
                 <Link href={'/'}>
-                    <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" />
+                    <Image height={40} width={130} src={'/logo/hlogo.png'} alt="umft" priority />
                 </Link>
                 <LanguageSwitcher />
             </div>

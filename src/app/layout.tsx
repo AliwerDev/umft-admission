@@ -1,11 +1,11 @@
 import MainProvider from '@/providers/MainProvider';
 import { Metadata, Viewport } from 'next';
-import { Inter, Nunito } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
     subsets: ['latin'],
-    variable: '--font-inter', // optional: CSS custom property
+    variable: '--font-inter', 
     display: 'swap',
 });
 
@@ -21,19 +21,13 @@ export const viewport: Viewport = {
     userScalable: false,
 };
 
-const nunito = Nunito({
-    subsets: ['latin'],
-    weight: ['300', '400', '500', '600', '700', '800', '900'],
-    display: 'swap',
-});
-
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={nunito.className}>
+        <html lang="en" className={inter.className}>
             <head>
                 {/* Meta Pixel Code */}
                 <script
@@ -62,7 +56,7 @@ fbq('track', 'PageView');
                 </noscript>
                 {/* End Meta Pixel Code */}
             </head>
-            <body className={`${inter.className} dark:bg-gray-900`}>
+            <body className={`dark:bg-gray-900`}>
                 <MainProvider>{children}</MainProvider>
             </body>
         </html>
