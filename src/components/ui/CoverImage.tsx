@@ -16,7 +16,7 @@ export default function CoverImage() {
     return (
         <div className="relative mx-auto w-full max-w-3xl">
             <Image 
-                src={isMobile ? '/images/cover.jpg' : '/images/cover-desktop.png'} 
+                src={isMobile ? '/images/cover.jpg' : '/images/cover-desktop.jpg'} 
                 alt="Cover" 
                 width={768} 
                 height={512} 
