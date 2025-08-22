@@ -55,6 +55,16 @@ fbq('track', 'PageView');
                     />
                 </noscript>
                 {/* End Meta Pixel Code */}
+
+                {/* Telegram Pixel Code */}
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+(function(t,l,g,r,m){t[g]||(g=t[g]=function(){g.run?g.run.apply(g,arguments):g.queue.push(arguments)},g.queue=[],t=l.createElement(r),t.async=!0,t.src=m,l=l.getElementsByTagName(r)[0],l.parentNode.insertBefore(t,l))})(window,document,'tgp','script','https://telegram.org/js/pixel.js');
+tgp('init','trkKcyHn');
+                        `,
+                    }}
+                />
             </head>
             <body className={`dark:bg-gray-900`}>
                 <MainProvider>{children}</MainProvider>

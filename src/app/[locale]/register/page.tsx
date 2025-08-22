@@ -4,6 +4,7 @@ import React from 'react';
 import { FaInstagram, FaYoutube, FaTelegram, FaFacebook } from 'react-icons/fa';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
+import TelegramButton from '@/components/TelegramButton';
 
 export default async function SuccessPage() {
     const t = await getTranslations();
@@ -29,7 +30,7 @@ export default async function SuccessPage() {
                 <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">{t('successTitle')}</h1>
                 <p className="mt-3 max-w-md text-gray-500">{t('successDescription')}</p> {/* Website button */}
                 <a
-                    href="https://umft.uz/"
+                    href="https://www.instagram.com/reel/DNa4KrbolCm/?igsh=amJzdnR3ZDhuaXc3"
                     className="mt-4 inline-block rounded-xl bg-gray-100 px-6 py-3 font-semibold text-gray-900 shadow hover:bg-gray-200"
                 >
                     {t('goToWebsite')}
@@ -42,15 +43,13 @@ export default async function SuccessPage() {
                 <p className="mx-auto mt-4 max-w-2xl text-gray-700">{t('newsBody')}</p>
 
                 <div className="mt-6 flex items-center justify-center-safe gap-3">
-                    {/* Telegram CTA button */}
-                    <a
-                        href="https://t.me/raqamli_kelajak_bot"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block rounded-xl bg-green-600 px-6 py-3 font-semibold text-white shadow hover:bg-green-700"
+                    {/* Telegram CTA button with tracking */}
+                    <TelegramButton
+                        href="https://t.me/umftuz"
+                        className="inline-block rounded-xl bg-green-600 px-6 py-3 font-semibold text-white shadow hover:bg-green-700 cursor-pointer"
                     >
                         {t('newsButton')}
-                    </a>
+                    </TelegramButton>
                 </div>
             </div>
 
